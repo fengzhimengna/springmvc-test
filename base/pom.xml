@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.fzm</groupId>
+    <artifactId>root</artifactId>
+    <version>${project.version}</version>
+  </parent>
+  <artifactId>base</artifactId>
+  <name>base</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+  	<spring.version>4.2.0.RELEASE</spring.version>
+  	<jpa.data.version>1.10.2.RELEASE</jpa.data.version>
+  	<commons-dbcp.version>1.4</commons-dbcp.version>
+  	<hibernate.version>5.0.10.Final</hibernate.version>
+  	<hibernate.validation.version>5.2.4.Final</hibernate.validation.version>
+  	<mysql.connector.version>5.1.18</mysql.connector.version>
+  	<fastjson.version>1.2.8</fastjson.version>
+  	<servlet-api.version>3.0.1</servlet-api.version>
+  	<jstl.version>1.2</jstl.version>
+  </properties>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope> 
+    </dependency>
+    <!-- spring -->
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-core</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-beans</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-context</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-web</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-webmvc</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-tx</artifactId>
+    	<version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <!-- end spring -->
+    <!-- servlet-api -->
+    <dependency> 
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>javax.servlet-api</artifactId>
+    	<version>${servlet-api.version}</version> 
+    	
+    </dependency>
+    <!-- end servlet-api -->
+    <!-- jstl -->
+    <dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>jstl</artifactId>
+		<version>${jstl.version}</version>
+	</dependency>
+    <!-- end jstl -->
+    <!-- datasource pool -->
+    <dependency>
+        <groupId>commons-dbcp</groupId>
+        <artifactId>commons-dbcp</artifactId>
+        <version>${commons-dbcp.version}</version>
+    </dependency>
+    <!-- spring data jpa -->
+    <dependency>
+    	<groupId>org.springframework.data</groupId>
+    	<artifactId>spring-data-jpa</artifactId>
+    	<version>${jpa.data.version}</version>
+    </dependency>
+    <!-- end spring data jpa -->
+    <!-- hibernate -->
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-core</artifactId>
+    	<version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-entitymanager</artifactId>
+    	<version>${hibernate.version}</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-validator</artifactId>
+    	<version>${hibernate.validation.version}</version>
+    </dependency>
+    <!-- end hibernate -->
+    <!-- jdbc connector -->
+    <dependency>
+    	<groupId>mysql</groupId>
+    	<artifactId>mysql-connector-java</artifactId>
+    	<version>${mysql.connector.version}</version>
+    </dependency>
+    <!-- end jdbc connector -->
+    <!-- fastjson -->
+    <dependency>
+    	<groupId>com.alibaba</groupId>
+    	<artifactId>fastjson</artifactId>
+    	<version>${fastjson.version}</version>
+    </dependency>
+  </dependencies>  
+</project>
