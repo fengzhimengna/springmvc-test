@@ -26,9 +26,8 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>servletDispatcher</servlet-name>
-		<url-pattern>/*</url-pattern>
+		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-	
 	<filter>
 		<filter-name>characterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -41,6 +40,17 @@
         <filter-name>characterEncodingFilter</filter-name>  
         <url-pattern>/*</url-pattern>  
     </filter-mapping>
+    
+    <!-- 跨域过滤器：允许跨域请求，用于vue的同步coding -->
+    <filter>
+    	<filter-name>vueAccessAllow</filter-name>
+    	<filter-class>com.fzm.core.filter.VueAccessAllowFilter</filter-class>
+    </filter>
+    <filter-mapping>
+    	<filter-name>vueAccessAllow</filter-name>
+    	<url-pattern>*.do</url-pattern>
+    </filter-mapping>
+    
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
