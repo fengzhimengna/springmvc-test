@@ -8,6 +8,8 @@ public class ResultMapDto {
 	
 	private Object dataList;
 
+	private boolean success;
+	
 	public Object getEntity() {
 		return entity;
 	}
@@ -22,6 +24,14 @@ public class ResultMapDto {
 
 	public void setDataList(Object dataList) {
 		this.dataList = dataList;
+	}
+
+	public boolean isSuccess() {
+		return success;
+	}
+
+	public void setSuccess(boolean success) {
+		this.success = success;
 	}
 	
 	
