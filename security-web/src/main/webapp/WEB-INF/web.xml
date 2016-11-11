@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+    <description>同时加载多个spring配置文件</description>
+	<param-name>contextConfigLocation</param-name>
+	<param-value>classpath:application-*.xml</param-value>
+  </context-param>
+  
+  <!-- 加载spring的全局监听器 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+  
+  <filter>
+    <filter-name>shiroFilter</filter-name>
+    <!-- DelegatingFilterProxy，该类其实并不能说是一个过滤器，它的原型是FilterToBeanProxy，即将Filter作为spring的bean，由spring来管理-->
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>shiroFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  <!-- 跨域过滤器：允许跨域请求，用于vue的同步coding -->
+   <filter>
+   	<filter-name>vueAccessAllow</filter-name>
+   	<filter-class>com.fzm.security.filter.VueAccessAllowFilter</filter-class>
+   </filter>
+   <filter-mapping>
+   	<filter-name>vueAccessAllow</filter-name>
+   	<url-pattern>*.do</url-pattern>
+   </filter-mapping>
+</web-app>

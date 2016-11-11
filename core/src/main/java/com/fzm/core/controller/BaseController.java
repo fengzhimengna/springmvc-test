@@ -16,7 +16,7 @@ import com.fzm.base.domain.BaseEntity;
 @RequestMapping("/")
 public class BaseController {
 
-	@RequestMapping(value="",method=RequestMethod.GET)
+	/*@RequestMapping(value="",method=RequestMethod.GET)
 	private ModelAndView  anyone(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		String url = request.getServletPath();
 		if(url!=null && url.length()>0){
@@ -25,7 +25,7 @@ public class BaseController {
 		else{
 			return new ModelAndView("index");
 		}
-	}
+	}*/
 	
 	
 }

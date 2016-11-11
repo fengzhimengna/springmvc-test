@@ -9,6 +9,8 @@
     <module>base</module>
     <module>web</module>
     <module>core</module>
+    <module>security</module>
+    <module>security-web</module>
   </modules>
   
   <properties>

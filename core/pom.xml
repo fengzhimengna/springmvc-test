@@ -21,7 +21,7 @@
     </dependency>
     <dependency>
     	<groupId>com.fzm</groupId>
-    	<artifactId>base</artifactId>
+    	<artifactId>base</artifactId> 
     </dependency>
     
   </dependencies>

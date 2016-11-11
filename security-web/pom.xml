@@ -7,22 +7,27 @@
     <artifactId>root</artifactId>
     <version>${project.version}</version>
   </parent>
-  <artifactId>web</artifactId>
+  <artifactId>security-web</artifactId>
   <packaging>war</packaging>
-  <name>web Maven Webapp</name>
+  <name>security-web Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  <dependencies>
+  <dependencies> 
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
-    <dependency>
+    <dependency> 
     	<groupId>com.fzm</groupId>
-    	<artifactId>core</artifactId>
+    	<artifactId>base</artifactId>
     </dependency>
-  </dependencies> 
+    <dependency> 
+    	<groupId>com.fzm</groupId> 
+    	<artifactId>security</artifactId>
+    	<version>1.0.0</version>
+    </dependency>
+  </dependencies>
   <build>
-    <finalName>web</finalName>
+    <finalName>security-web</finalName>
   </build>
 </project>
